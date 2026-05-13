@@ -14,7 +14,7 @@ public class BasicGameApp {
 
         for(int x = 0; x<13;x=x+1){
             deck[x] = new Card(10,x,"hearts");
-            deck[x].print();
+             deck[x].print();
         }
     }
 
