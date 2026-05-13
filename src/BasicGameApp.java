@@ -18,5 +18,14 @@ public class BasicGameApp {
         }
     }
 
+    public void PrintDeck()
+    {
+for (int i =0; i < deck.length; i++){
+    if(deck[i] ==null){
+        deck[i].print();
+    }
+}
+
+    }
 
 }
