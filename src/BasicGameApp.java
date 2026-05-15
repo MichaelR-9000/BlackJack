@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 
 public class BasicGameApp {
     Card[] deck;
@@ -13,6 +13,8 @@ public class BasicGameApp {
     public BasicGameApp() {
         System.out.println("Welcome to Blackjack!");
         deck = new Card[52];
+        p1 = new Player();
+        d1 = new Dealer();
 
         int cardIndex = 0;
         for (int i = 0; i<4;i++) {
@@ -24,6 +26,17 @@ public class BasicGameApp {
         }
         Shuffle();
         PrintDeck();
+
+        p1.hand[0] = deck[0];
+        p1.hand[1]=deck[1];
+//ask the user questions
+        Scanner s = new Scanner(System.in);
+        System.out.println("what is your name?");
+        String aName = s.nextLine();
+        System.out.println(aName);
+        p1.name = aName;
+        p1.calculatetotal();
+        p1.printInfo();
     }
 
 

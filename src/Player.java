@@ -13,7 +13,7 @@ public class Player {
         Cardtotal = 0;
         isBust = false;
         Ishit = false;
-        hand = new Card[10];
+        hand = new Card[2];
         name = "Mike";
     }
 
@@ -23,16 +23,18 @@ public class Player {
         System.out.println("Hit: " + Ishit);
         System.out.println("name: " + name);
 
-        for (
-                int i = 0;
-                i < hand.length; i = i + 1) {
-
-            if (hand[i] == null) {
-
-            } else {
+        for (int i = 0; i < hand.length; i = i + 1) {
                 hand[i].print();
-
             }
         }
+    public void calculatetotal(){
+        int addedValue = 0;
+        for(int d = 0;d<hand.length;d++){
+            addedValue = addedValue + hand[d].value;
+        }
+        Cardtotal = addedValue;
+
     }
-}
+
+    }
+
